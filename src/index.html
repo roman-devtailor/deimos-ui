@@ -4,7 +4,6 @@
     <title></title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="/theme-one.css" rel="stylesheet" id="theme-link">
     <link href="/main.css" rel="stylesheet">
     <style>
       body {
@@ -23,12 +22,9 @@
       }
     </style>
   </head>
-  <body>
+  <body id="body">
     <div class="row">
-      <div>
-        <button class="btn" id="theme-one-setter">Set Theme One</button>
-        <button class="btn btn--secondary" id="theme-two-setter">Set Theme Two</button>
-      </div>
+        <button class="btn" id="switch-theme">Switch Theme</button>
     </div>
     <div class="row">
       <button class="btn">Primary</button>
@@ -46,21 +42,12 @@
   </body>
 
   <script>
-    const themes = {
-      one: '/theme-one.css',
-      two: '/theme-two.css'
-    };
+    const body = document.getElementById('body')
 
-    const themeLink = document.getElementById('theme-link')
+    const switchBtn = document.getElementById('switch-theme')
 
-    const setTheme = (theme) => {
-      themeLink.setAttribute('href', theme);
-    }
-
-    const themeOneBtn = document.getElementById('theme-one-setter');
-    themeOneBtn.addEventListener('click', () => {setTheme(themes.one)})
-
-    const themeTwoBtn = document.getElementById('theme-two-setter');
-    themeTwoBtn.addEventListener('click', () => {setTheme(themes.two)})
+    switchBtn.addEventListener('click', () => {
+          body.classList.toggle('deimos-theme-two')
+    })
   </script>
 </html>
