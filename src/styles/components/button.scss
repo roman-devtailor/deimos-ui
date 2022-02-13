@@ -7,6 +7,8 @@
 
   padding: var(--padding-medium);
 
+  cursor: pointer;
+
   white-space: nowrap;
   text-decoration: none;
 
@@ -35,6 +37,12 @@
   padding: var(--padding-large);
 
   font-size: var(--font-size-large);
+}
+
+.btn--secondary {
+  color: var(--color-secondary);
+  border-color: var(--color-secondary);
+  background-color: transparent;
 }
 
 .btn--info {

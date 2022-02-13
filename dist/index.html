@@ -4,9 +4,14 @@
     <title></title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="/theme-one.css" rel="stylesheet">
+    <link href="/theme-one.css" rel="stylesheet" id="theme-link">
     <link href="/main.css" rel="stylesheet">
     <style>
+      body {
+        background: var(--color-white);
+        color: var(--color-black);
+      }
+
       .row {
         margin: 20px auto;
         display: flex;
@@ -20,7 +25,14 @@
   </head>
   <body>
     <div class="row">
+      <div>
+        <button class="btn" id="theme-one-setter">Set Theme One</button>
+        <button class="btn btn--secondary" id="theme-two-setter">Set Theme Two</button>
+      </div>
+    </div>
+    <div class="row">
       <button class="btn">Primary</button>
+      <button class="btn btn--secondary">Secondary</button>
       <button class="btn btn--info">Info</button>
       <button class="btn btn--warrning">Error</button>
       <button class="btn btn--success">Success</button>
@@ -32,4 +44,23 @@
       <button class="btn btn--lg">Large</button>
     </div>
   </body>
+
+  <script>
+    const themes = {
+      one: '/theme-one.css',
+      two: '/theme-two.css'
+    };
+
+    const themeLink = document.getElementById('theme-link')
+
+    const setTheme = (theme) => {
+      themeLink.setAttribute('href', theme);
+    }
+
+    const themeOneBtn = document.getElementById('theme-one-setter');
+    themeOneBtn.addEventListener('click', () => {setTheme(themes.one)})
+
+    const themeTwoBtn = document.getElementById('theme-two-setter');
+    themeTwoBtn.addEventListener('click', () => {setTheme(themes.two)})
+  </script>
 </html>
