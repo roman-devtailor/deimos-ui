@@ -1,0 +1,56 @@
+.btn {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: var(--padding-medium);
+
+  white-space: nowrap;
+  text-decoration: none;
+
+  color: var(--color-white);
+  border: 2px solid var(--color-primary);
+
+  border-radius: var(--border-radius);
+  background-color: var(--color-primary);
+
+  font-size: var(--font-size-medium);
+}
+
+.btn[disabled] {
+  color: var(--color-gray);
+  border-color: var(--color-gray);
+  background-color: transparent;
+}
+
+.btn--sm {
+  padding: var(--padding-small);
+
+  font-size: var(--font-size-small);
+}
+
+.btn--lg {
+  padding: var(--padding-large);
+
+  font-size: var(--font-size-large);
+}
+
+.btn--info {
+  color: var(--color-info);
+  border-color: var(--color-info);
+  background-color: transparent;
+}
+
+.btn--warrning {
+  color: var(--color-warrning);
+  border-color: var(--color-warrning);
+  background-color: transparent;
+}
+
+.btn--success {
+  color: var(--color-success);
+  border-color: var(--color-success);
+  background-color: transparent;
+}

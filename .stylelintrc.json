@@ -1,0 +1,15 @@
+{
+  "extends": ["stylelint-config-standard", "stylelint-order-config-standard"],
+  "customSyntax": "postcss-scss",
+  "plugins": ["stylelint-order", "stylelint-scss"],
+  "rules": {
+    "indentation": [2],
+    "color-hex-case": "upper",
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": true,
+    "selector-class-pattern": "^[a-z][a-zA-Z0-9-]+$",
+    "length-zero-no-unit": null,
+    "property-no-vendor-prefix": null,
+    "selector-no-vendor-prefix": null
+  }
+}
